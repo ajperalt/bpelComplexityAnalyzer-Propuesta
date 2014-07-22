@@ -5,43 +5,13 @@
 \textclass article
 \begin_preamble
 \usepackage{babel}
-\usepackage{babel}
-\usepackage{color}\usepackage{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-\usepackage{url}\usepackage{breakurl}\usepackage{babel}
-\usepackage{lscape}% packages
-\usepackage{xspace}\usepackage{ifthen}\usepackage{amsbsy}\usepackage{balance}\usepackage{booktabs}\usepackage{multirow}\usepackage{needspace}\usepackage{microtype}\usepackage{bold-extra}\usepackage{subfigure}\usepackage{enumerate}% references
-\usepackage[all]{hypcap}\usepackage{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-\usepackage{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-% proof-reading
-\usepackage{xcolor}\usepackage{ulem}\newcommand{\ra}{$\rightarrow$}
-\newcommand{\ugh}[1]{\textcolor{red}{\uwave{#1}}} % please rephrase
-\newcommand{\ins}[1]{\textcolor{blue}{\uline{#1}}} % please insert
-\newcommand{\del}[1]{\textcolor{red}{\sout{#1}}} % please delete
-\newcommand{\chg}[2]{\textcolor{red}{\sout{#1}}{\ra}\textcolor{blue}{\uline{#2}}} % please change
-\newcommand{\chk}[1]{\textcolor{green}{#1}} % changed, please check
-% comments \nb{label}{color}{text}
-\newboolean{showcomments}
-\setboolean{showcomments}{true}
-\ifthenelse{\boolean{showcomments}}
-        {\newcommand{\nb}[3]{
-                {\colorbox{#2}{\bfseries\sffamily\scriptsize\textcolor{white}{#1}}}
-                {\textcolor{#2}{\sf\small$\blacktriangleright$\textit{#3}$\blacktriangleleft$}}}
-         \newcommand{\version}{\emph{\scriptsize$-$Id$-$}}}
-        {\newcommand{\nb}[2]{}
-         \newcommand{\version}{}}
-\newcommand{\rev}[2]{\nb{Reviewer #1}{red}{#2}}
-\newcommand{\ab}[1]{\nb{Alexandre}{blue}{#1}}
-\newcommand{\ai}[1]{\nb{Alejandro}{orange}{#1}}
-\newcommand{\on}[1]{\nb{Oscar}{olive}{#1}}
+\usepackage{lscape}
 \end_preamble
-\use_default_options true
+\use_default_options false
 \maintain_unincluded_children false
 \language spanish
 \language_package default
-\inputencoding auto
+\inputencoding latin9
 \fontencoding T1
 \font_roman lmodern
 \font_sans default
@@ -55,16 +25,12 @@
 
 \graphics default
 \default_output_format default
-\output_sync 1
-\output_sync_macro "\usepackage[active]{srcltx}"
+\output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref true
-\pdf_title "Titulo"
-\pdf_author "Alvaro Jose Peralta Ocampo"
-\pdf_subject "Propuesta de tesis"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen true
@@ -74,7 +40,6 @@
 \pdf_colorlinks true
 \pdf_backref section
 \pdf_pdfusetitle true
-\pdf_quoted_options "colorlinks,urlcolor=black,linkcolor=black,citecolor=black,plainpages=false"
 \papersize default
 \use_geometry true
 \use_amsmath 2
@@ -91,9 +56,9 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 4cm
+\leftmargin 3cm
 \topmargin 2cm
-\rightmargin 4cm
+\rightmargin 3cm
 \bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
@@ -136,13 +101,13 @@ Introducción
 \begin_layout Standard
 En el contexto empresarial, la constante que más resalta es la variabilidad
  de los procesos de negocio.
- Ésta es ocasionada por la necesidad de crecimiento y mejora continua a
- la que se ven enfrentadas las organizaciones, producto de la alta competitivida
-d en la que están inmersas.
- Retos como las fusiones corporativas, las cadenas de valor distribuidas,
- las nuevas tecnologías y formas de negocio, los clientes formados tecnológicame
-nte, entre otras; han ocasionado requerimientos muy exigentes al área de
- TI que día a día se ve forzada a brindar soluciones innovadoras, en menor
+ La cual es ocasionada por la necesidad de crecimiento y mejora continua
+ a la que se ven enfrentadas las organizaciones.
+ Principalmente debido a la alta competitividad en la que están inmersas,
+ retos como las fusiones corporativas, las cadenas de valor distribuidas,
+ las nuevas estrategias del negocio, los clientes formados tecnológicamente,
+ entre otras; han ocasionado requerimientos muy exigentes al área de TI
+ que día a día se ve forzada a brindar soluciones innovadoras, en menor
  tiempo y con menor costo de inversión
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -156,7 +121,7 @@ key "libroInteroperabilidadDCC2009"
 \begin_layout Standard
 Lo anterior ha propiciado el desarrollo de una industria incipiente al interior
  de las tecnologías de información, desde principios del siglo XXI, logrando
- posicionarse como una buena solución por contemplar un patrón de arquitectura
+ posicionarse como una buena solución, por contemplar un patrón de arquitectura
  que facilita el proceso de enfrentar los requerimientos complejos reutilizando
  los factores críticos de éxito implementados con anterioridad.
 \end_layout
@@ -166,18 +131,14 @@ Ha esta solución se le conoce como SOA (Arquitecturas Orientadas al Servicio),
  procedimiento que se presenta como la principal respuesta para lograr coordinar
  la interacción de los diferentes actores involucrados en la cadena de valor
  de las organizaciones.
- Su principal objetivo se centra en la re utilización de “servicios” que
- actualmente están siendo usados en la organización, disminuyendo así la
- complejidad en la integración de éstos.
-\end_layout
+ Su principal objetivo se centra en la re-utilización de 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Standard
-Esta coordinación es propiciada por dos conceptos desarrollados dentro del
- contexto SOA, denominados orquestación y coreografía.
- Ambos cumplen un papel análogo a su definición natural, donde un conjunto
- de desarrollados por el esfuerzo conjunto entre el área de TI y alguna
- área del negocio, en adelante el resultado del desarrollo sinérgico lo
- llamaremos procesos de negocio web.
+servicios” usados normalmente en la organización, utilizando procesos de
+ negocio que son los responsables de integrar estos servicios a la dinámica
+ de la operación , disminuyendo así la complejidad en la integración de
+ éstos.
 \end_layout
 
 \begin_layout Standard
@@ -198,7 +159,8 @@ key "Cardoso2008"
 \begin_layout Standard
 Para poder diseñar e implementar estos procesos de negocio la organización
  W3C ha desarrollado un lenguaje que permite representar los flujos y sus
- actividades utilizando estándares altamente aceptados como lo es el figura
+ actividades utilizando estándares altamente aceptados como el que se presenta
+ en la figura
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Ejemplo-proceso-simple"
@@ -207,9 +169,25 @@ reference "fig:Ejemplo-proceso-simple"
 
 .
  El flujo de actividad de la izquierda es implementado usando tags xml que
- pueden invocar a un servicio web que tiene la responsabilidad de validar
- la contraseña de un cliente, de esta manera se está reutilizando la validación
- del cliente, pudiendo además implementarse en múltiples contextos del negocio.
+ pueden invocar a un servicios web, los cuales tiene la responsabilidad
+ de ejecutar un servicio que en este caso seria 
+\begin_inset Quotes fld
+\end_inset
+
+validar la contraseña de un cliente
+\begin_inset Quotes frd
+\end_inset
+
+.
+ De esta manera se está reutilizando el servicio 
+\begin_inset Quotes fld
+\end_inset
+
+validación del cliente
+\begin_inset Quotes frd
+\end_inset
+
+, evitando así el esfuerzo de volver a realizar dicha funcionalidad.
 \end_layout
 
 \begin_layout Standard
@@ -238,8 +216,16 @@ Ejemplo proceso simple de validación de contraseña en diagrama y su representa
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset space \hspace{}
-\length -1.5cm
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
 \end_inset
 
 
@@ -248,7 +234,7 @@ Ejemplo proceso simple de validación de contraseña en diagrama y su representa
 
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -265,11 +251,10 @@ La utilización del lenguaje BPEL ha facilitado que los procesos de negocio
 \end_layout
 
 \begin_layout Standard
-El desarrollo de esta tecnología ha generado arquitecturas de capa media,
- es decir componentes de software entre las estructuras de datos y los mecanismo
-s que visualizan información hacia los clientes finales, menos acoplados,
- robustos, interoperables y fáciles de crecer en el tiempo.
- 
+El desarrollo de esta tecnología ha generado arquitecturas de capa media
+ (componentes de software entre las estructuras de datos y las interfaces
+ gráficas de usuario final) menos acopladas, robustas, interoperables y
+ fáciles de crecer en el tiempo.
 \end_layout
 
 \begin_layout Standard
@@ -281,25 +266,16 @@ Esto ha permitido que las estructuras del negocio puedan ser descritas dentro
 \end_layout
 
 \begin_layout Standard
-En este contexto, la propuesta de tesis se desarrollara en un ambiente en
- donde las organizaciones tienen sus procesos descritos y ejecutándose en
- un ambiente real de operación, donde estos procesos son mantenidos y modificado
-s constantemente para representar la realidad de la organización y así mantenerl
-a competitiva.
-\end_layout
-
-\begin_layout Standard
-El problema se centra en que la realidad del negocio sigue cambiando, afectando
- incluso los procesos bien definidos que se encuentran en la capa media,
- así pues aun teniendo una herramienta como SOA, que nos ayuda en la integración
- de servicios y en la fácil adaptación de nuevos procesos, estos procesos
- siguen creciendo y aumentando en su complejidad.
- Por lo anterior, se puede concluir que los atributos de calidad del software
- 
-\end_layout
-
-\begin_layout Standard
-siguen siendo una preocupación tanto para el área de TI como para el negocio.
+Sobre este contexto empresarial es donde es en donde se ha detectado un
+ conjunto de problemas que se basan en que la realidad del negocio sigue
+ cambiando.
+ Afectando incluso los procesos bien definidos que se encuentran en la capa
+ media, así pues aun teniendo una herramienta como SOA, que nos ayuda en
+ la integración de servicios y en la fácil adaptación de nuevos procesos,
+ estos procesos siguen creciendo y aumentando en su complejidad.
+ Por lo que se puede inferir que los atributos de calidad del software como
+ mantenibilidad, complejidad,desempeño entre otros.
+ Siguen siendo una preocupación tanto para el área de TI como para el negocio.
 \end_layout
 
 \begin_layout Standard
@@ -317,6 +293,7 @@ Problema a resolver / Oportunidad de Mejora
 
 \begin_layout Standard
 
+\series bold
 \emph on
 Contexto: Análisis de procesos de negocio orientados a la web, en situaciones
  de alta complejidad, con requerimientos funcionales cambiantes, en un entorno
@@ -324,20 +301,31 @@ Contexto: Análisis de procesos de negocio orientados a la web, en situaciones
 \end_layout
 
 \begin_layout Standard
-La oportunidad de mejora se centra en lo que hemos llamado “complejidad
- de procesos de negocio web” a pesar de que esta se produce en el proceso
- de desarrollo, no está exenta a los problemas de un software tradicional,
- por ejemplo: inyección de defectos, excepciones inesperadas, poca comprensión
- del proceso, etcétera; lo que a este nivel de abstracción puede ser un
- costo gigantesco, con repercusiones negativas tanto para el proceso de
- desarrollo como para el impacto en el negocio.
+La oportunidad de mejora se centra en lo que hemos llamado 
+\begin_inset Quotes eld
+\end_inset
+
+complejidad de procesos de negocio web” a pesar de que esta se produce en
+ el proceso de desarrollo, no está exenta a los problemas de un software
+ tradicional, por ejemplo: inyección de defectos, excepciones inesperadas,
+ poca comprensión del proceso, etcétera; lo que a este nivel de abstracción
+ puede ser un costo gigantesco, con repercusiones negativas tanto para el
+ proceso de desarrollo como para el impacto en el negocio.
 \end_layout
 
 \begin_layout Standard
 Tomemos como ejemplo el caso de estudio que propone la suite de Oracle SOA
- Suite, de nombre Fusion Order Demo[2] que simula el comportamiento de una
- empresa internacional de retail como Fallabela o París, conocidas en el
- contexto chileno.
+ Suite, de nombre 
+\begin_inset Quotes fld
+\end_inset
+
+Fusion Order Demo
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Que simula el comportamiento de una empresa internacional de retail como
+ Fallabela o París, conocidas en el contexto chileno.
 \end_layout
 
 \begin_layout Standard
@@ -352,7 +340,6 @@ El servicio que nos interesa observar, es la ejecución del proceso de orden
 Para lograr este objetivo, el proceso de negocio tiene que interactuar con
  múltiples actores dentro de una cadena y sistema de valor, además de ejecutar
  ciertas instrucciones de negocio para producir el resultado esperado.
- 
 \end_layout
 
 \begin_layout Standard
@@ -394,14 +381,12 @@ key "Cardoso2008,Cardoso2006,Budnik2011"
  (CFC) que mide como afectan los controles de flujo tales como estructuras
  de bifurcación o iteración y las métricas de actividad que es similar a
  la métrica de lineas de código.
- 
 \end_layout
 
 \begin_layout Standard
 En este contexto, la propuesta de alcance se construye desde la labor heurística
  del arquitecto líder, que puede prometer cualidades del software que no
  lo comprometan.
- 
 \end_layout
 
 \begin_layout Standard
@@ -494,10 +479,13 @@ key "DanielLubke2009"
 \end_layout
 
 \begin_layout Standard
-Otra de las problemáticas comunes que se deben enfrentar es el “cambio”
- constante al interior negocio, los estudios indican que al 38% de las solucione
-s con procesos de negocio se les aplicará un proceso de rediseño en toda
- la organización
+Otra de las problemáticas comunes que se deben enfrentar es el 
+\begin_inset Quotes eld
+\end_inset
+
+cambio” constante al interior negocio, los estudios indican que al 38% de
+ las soluciones con procesos de negocio se les aplicará un proceso de rediseño
+ en toda la organización
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cardoso2008"
@@ -564,7 +552,7 @@ reference "fig:Preocupaciones-del-Gobierno"
 
  muestra el contexto básico de lo que debe preocupar a la disciplina de
  gobierno de servicios, quien es en esencia la responsable de la toma de
- decisiones asociadas principalmente a las siguientes preguntas:
+ decisiones asociadas principalmente a las siguientes preguntas: 
 \end_layout
 
 \begin_layout Enumerate
@@ -572,11 +560,12 @@ reference "fig:Preocupaciones-del-Gobierno"
 \begin_inset Newline newline
 \end_inset
 
-Para responder a esta pregunta es necesario tener un control sobre quién
+ Para responder a esta pregunta es necesario tener un control sobre quién
  debe hacer y qué actividades, así como quien puede ejecutar los procesos
  de negocio, por lo que es indispensable comprender las relaciones que tienen
  los distintos integrantes del proceso con los artefactos que intervienen
  en el.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -584,12 +573,13 @@ Para responder a esta pregunta es necesario tener un control sobre quién
 \begin_inset Newline newline
 \end_inset
 
-Cada proceso tiene asociado cualidades de servicio como seguridad o metas
+ Cada proceso tiene asociado cualidades de servicio como seguridad o metas
  de negocio que son designadas durante el diseño del proceso y deben cumplirse
  para que la organización pueda cumplir con sus objetivos.
  Preocuparse por determinar porque un proceso puede o no cumplir con dichas
  cualidades es complejo al tener un aumento significativo en la cantidad
  de reglas y sus relaciones.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -597,12 +587,13 @@ Cada proceso tiene asociado cualidades de servicio como seguridad o metas
 \begin_inset Newline newline
 \end_inset
 
-La última pregunta representa en sí misma la labor del diseño de procesos
+ La última pregunta representa en sí misma la labor del diseño de procesos
  de negocio, al tener que preocuparse tanto por el diseño como de los problemas
  descritos en esta propuesta.
  El cómo es la pregunta que conlleva más esfuerzo por parte de los ingenieros
  y que tiene el mayor porcentaje de errores al ser en esencia una implementación
  de un desarrollo de software.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -670,7 +661,7 @@ status open
 
 
 \begin_inset Graphics
-	filename img/SOAGovernanceConcerns2.eps
+	filename img/SOAGovernanceConcerns2.png
 	scale 80
 
 \end_inset
@@ -688,7 +679,6 @@ En este contexto, el gobierno de procesos es importante para destacar que
  se están abordando todos los problemas anteriormente mencionados en distintos
  centros de investigación, los cuales están produciendo herramientas metodológic
 as para abordar correctamente los procesos.
- 
 \end_layout
 
 \begin_layout Standard
@@ -746,18 +736,7 @@ Problema 6 - La Disciplina de valoración no es comúnmente adoptada en el
 Se ha demostrado en otros contextos del desarrollo de software que contar
  con herramientas que permitan visualizar diferentes perspectivas de arquitectur
 a es una excelente manera de integrar la valoración del producto al ciclo
- de vida del desarrollo, caso de ejemplo es
-\begin_inset Flex Flex:URL
-status collapsed
-
-\begin_layout Plain Layout
-
-www.moosetechnology.com
-\end_layout
-
-\end_inset
-
-.
+ de vida del desarrollo, caso de ejemplo es www.moosetechnology.com.
  Herramienta que tiene como propósito incrementar las opciones y la productivida
 d de las valoraciones de software utilizando múltiples herramientas que
  permiten analizar las diferentes perspectivas de un software siendo el
@@ -843,7 +822,6 @@ El constante crecimiento de esta tecnología, principalmente ahora en donde
  tecnología pueda ser usada en la mediana industria porque lo que en términos
  de importancia para la comunidad, el desarrollo de esta tesis es un aporte
  muy valorado para facilitar la implantación y manutención de los procesos.
- 
 \end_layout
 
 \begin_layout Standard
@@ -892,28 +870,25 @@ Ha la fecha de entrega de este documento ya se ha iniciado con una fase
  de concepción en donde se ha realizado una evaluación de la suite de trabajo
  moosetechnology como herramienta principal de co-creación de la herramienta.
  Observando que existen numerosas ventajas, para el análisis y principalmente
- para la producción de herramientas de vizualización y navegabilidad de
+ para la producción de herramientas de visualización y navegabilidad de
  artefactos.
 \end_layout
 
 \begin_layout Standard
 Con base en el éxito de esta primera fase en la que principalmente se realizaron
- tareas utilizando una estrategia de metodología ágil guiada por paquetes
- de trabajo cortos y validación, con la que efectivamente se verifico la
- viabilidad de la propuesta de tesis, ademas de que siendo este proyecto
- es una propuesta netamente de innovación.
- Se concluye que optar por una estrategía iterativa e incremental guiada
- por una herramienta de gestión tipo scrum es la que mas se ajusta a este
+ tareas de verificación tecnológica, utilizando estrategia bajo el modelo
+ de metodología ágil, con la que efectivamente se verifico la viabilidad
+ de la propuesta de tesis, además de que siendo este proyecto es una propuesta
+ netamente de innovación.
+ Se concluye que optar por una estrategia iterativa e incremental guiada
+ por una herramienta de gestión tipo scrum, es la que mas se ajusta a este
  modelo.
 \begin_inset Newpage newpage
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -926,7 +901,7 @@ begin{landscape}
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -958,9 +933,32 @@ Plan de trabajo General - Macroactividades:
 \end_layout
 
 \begin_layout Plain Layout
-\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename img/Cronograma.eps
+	filename img/Cronograma.PNG
 
 \end_inset
 
@@ -970,11 +968,8 @@ Plan de trabajo General - Macroactividades:
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -987,7 +982,7 @@ par
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1005,7 +1000,7 @@ end{landscape}
 \begin_inset Newpage newpage
 \end_inset
 
- 
+  
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "MGTI"

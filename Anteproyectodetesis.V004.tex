@@ -1,4 +1,4 @@
-%% LyX 2.0.7 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[spanish]{article}
 \usepackage{lmodern}
@@ -6,60 +6,24 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
-\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=4cm,rmargin=4cm}
-\usepackage[active]{srcltx}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=3cm,rmargin=3cm}
 \usepackage{color}
 \usepackage{babel}
 \addto\shorthandsspanish{\spanishdeactivate{~<>}}
 
-\usepackage{url}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[unicode=true,
+\usepackage[unicode=true,pdfusetitle,
  bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,bookmarksopenlevel=1,
  breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=true]
  {hyperref}
-\hypersetup{pdftitle={Titulo},
- pdfauthor={Alvaro Jose Peralta Ocampo},
- pdfsubject={Propuesta de tesis},
- colorlinks,urlcolor=black,linkcolor=black,citecolor=black,plainpages=false}
 \usepackage{breakurl}
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{babel}
-\usepackage{babel}
-\usepackage{color}\usepackage{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-\usepackage{url}\usepackage{breakurl}\usepackage{babel}
-\usepackage{lscape}% packages
-\usepackage{xspace}\usepackage{ifthen}\usepackage{amsbsy}\usepackage{balance}\usepackage{booktabs}\usepackage{multirow}\usepackage{needspace}\usepackage{microtype}\usepackage{bold-extra}\usepackage{subfigure}\usepackage{enumerate}% references
-\usepackage[all]{hypcap}\usepackage{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-\usepackage{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-% proof-reading
-\usepackage{xcolor}\usepackage{ulem}\newcommand{\ra}{$\rightarrow$}
-\newcommand{\ugh}[1]{\textcolor{red}{\uwave{#1}}} % please rephrase
-\newcommand{\ins}[1]{\textcolor{blue}{\uline{#1}}} % please insert
-\newcommand{\del}[1]{\textcolor{red}{\sout{#1}}} % please delete
-\newcommand{\chg}[2]{\textcolor{red}{\sout{#1}}{\ra}\textcolor{blue}{\uline{#2}}} % please change
-\newcommand{\chk}[1]{\textcolor{green}{#1}} % changed, please check
-% comments \nb{label}{color}{text}
-\newboolean{showcomments}
-\setboolean{showcomments}{true}
-\ifthenelse{\boolean{showcomments}}
-        {\newcommand{\nb}[3]{
-                {\colorbox{#2}{\bfseries\sffamily\scriptsize\textcolor{white}{#1}}}
-                {\textcolor{#2}{\sf\small$\blacktriangleright$\textit{#3}$\blacktriangleleft$}}}
-         \newcommand{\version}{\emph{\scriptsize$-$Id$-$}}}
-        {\newcommand{\nb}[2]{}
-         \newcommand{\version}{}}
-\newcommand{\rev}[2]{\nb{Reviewer #1}{red}{#2}}
-\newcommand{\ab}[1]{\nb{Alexandre}{blue}{#1}}
-\newcommand{\ai}[1]{\nb{Alejandro}{orange}{#1}}
-\newcommand{\on}[1]{\nb{Oscar}{olive}{#1}}
+\usepackage{lscape}
 
 \makeatother
 
@@ -82,18 +46,18 @@ de negocio desarrollados en BPEL}
 \section{Introducción}
 
 En el contexto empresarial, la constante que más resalta es la variabilidad
-de los procesos de negocio. Ésta es ocasionada por la necesidad de
-crecimiento y mejora continua a la que se ven enfrentadas las organizaciones,
-producto de la alta competitividad en la que están inmersas. Retos
-como las fusiones corporativas, las cadenas de valor distribuidas,
-las nuevas tecnologías y formas de negocio, los clientes formados
-tecnológicamente, entre otras; han ocasionado requerimientos muy exigentes
-al área de TI que día a día se ve forzada a brindar soluciones innovadoras,
-en menor tiempo y con menor costo de inversión\cite{libroInteroperabilidadDCC2009}.
+de los procesos de negocio. La cual es ocasionada por la necesidad
+de crecimiento y mejora continua a la que se ven enfrentadas las organizaciones.
+Principalmente debido a la alta competitividad en la que están inmersas,
+retos como las fusiones corporativas, las cadenas de valor distribuidas,
+las nuevas estrategias del negocio, los clientes formados tecnológicamente,
+entre otras; han ocasionado requerimientos muy exigentes al área de
+TI que día a día se ve forzada a brindar soluciones innovadoras, en
+menor tiempo y con menor costo de inversión\cite{libroInteroperabilidadDCC2009}.
 
 Lo anterior ha propiciado el desarrollo de una industria incipiente
 al interior de las tecnologías de información, desde principios del
-siglo XXI, logrando posicionarse como una buena solución por contemplar
+siglo XXI, logrando posicionarse como una buena solución, por contemplar
 un patrón de arquitectura que facilita el proceso de enfrentar los
 requerimientos complejos reutilizando los factores críticos de éxito
 implementados con anterioridad.
@@ -102,16 +66,11 @@ Ha esta solución se le conoce como SOA (Arquitecturas Orientadas al
 Servicio), procedimiento que se presenta como la principal respuesta
 para lograr coordinar la interacción de los diferentes actores involucrados
 en la cadena de valor de las organizaciones. Su principal objetivo
-se centra en la re utilización de \textquotedblleft{}servicios\textquotedblright{}
-que actualmente están siendo usados en la organización, disminuyendo
-así la complejidad en la integración de éstos.
-
-Esta coordinación es propiciada por dos conceptos desarrollados dentro
-del contexto SOA, denominados orquestación y coreografía. Ambos cumplen
-un papel análogo a su definición natural, donde un conjunto de desarrollados
-por el esfuerzo conjunto entre el área de TI y alguna área del negocio,
-en adelante el resultado del desarrollo sinérgico lo llamaremos procesos
-de negocio web.
+se centra en la re-utilización de ``servicios\textquotedblright{}
+usados normalmente en la organización, utilizando procesos de negocio
+que son los responsables de integrar estos servicios a la dinámica
+de la operación , disminuyendo así la complejidad en la integración
+de éstos.
 
 Estos procesos de negocio no son muy diferentes de los denominados
 workflows o flujos de trabajo desarrollados en múltiples disciplinas
@@ -121,20 +80,21 @@ web\cite{Cardoso2008}.
 
 Para poder diseñar e implementar estos procesos de negocio la organización
 W3C ha desarrollado un lenguaje que permite representar los flujos
-y sus actividades utilizando estándares altamente aceptados como lo
-es el figura\ref{fig:Ejemplo-proceso-simple}. El flujo de actividad
-de la izquierda es implementado usando tags xml que pueden invocar
-a un servicio web que tiene la responsabilidad de validar la contraseña
-de un cliente, de esta manera se está reutilizando la validación del
-cliente, pudiendo además implementarse en múltiples contextos del
-negocio.
+y sus actividades utilizando estándares altamente aceptados como el
+que se presenta en la figura\ref{fig:Ejemplo-proceso-simple}. El
+flujo de actividad de la izquierda es implementado usando tags xml
+que pueden invocar a un servicios web, los cuales tiene la responsabilidad
+de ejecutar un servicio que en este caso seria <<validar la contraseña
+de un cliente>>. De esta manera se está reutilizando el servicio
+<<validación del cliente>>, evitando así el esfuerzo de volver a
+realizar dicha funcionalidad.
 
 \begin{figure}
 \caption{\label{fig:Ejemplo-proceso-simple}Ejemplo proceso simple de validación
 de contraseña en diagrama y su representación en BPEL}
 
 
-\hspace{-1.5cm}\includegraphics{img/dacttobpel}
+\centering\includegraphics{img/dacttobpel} 
 \end{figure}
 
 
@@ -146,10 +106,9 @@ SOA, lo que ha generado un gran adelanto tecnológico en la relación
 Negocio-TI.
 
 El desarrollo de esta tecnología ha generado arquitecturas de capa
-media, es decir componentes de software entre las estructuras de datos
-y los mecanismos que visualizan información hacia los clientes finales,
-menos acoplados, robustos, interoperables y fáciles de crecer en el
-tiempo. 
+media (componentes de software entre las estructuras de datos y las
+interfaces gráficas de usuario final) menos acopladas, robustas, interoperables
+y fáciles de crecer en el tiempo.
 
 Esto ha permitido que las estructuras del negocio puedan ser descritas
 dentro de esta capa media facilitando la comprensión de los usuarios,
@@ -157,22 +116,16 @@ a través de la producción de un código que describe el funcionamiento
 del negocio desde sus procesos más simples hasta sus procesos más
 complejos y críticos para el éxito de la organización.
 
-En este contexto, la propuesta de tesis se desarrollara en un ambiente
-en donde las organizaciones tienen sus procesos descritos y ejecutándose
-en un ambiente real de operación, donde estos procesos son mantenidos
-y modificados constantemente para representar la realidad de la organización
-y así mantenerla competitiva.
-
-El problema se centra en que la realidad del negocio sigue cambiando,
-afectando incluso los procesos bien definidos que se encuentran en
-la capa media, así pues aun teniendo una herramienta como SOA, que
-nos ayuda en la integración de servicios y en la fácil adaptación
-de nuevos procesos, estos procesos siguen creciendo y aumentando en
-su complejidad. Por lo anterior, se puede concluir que los atributos
-de calidad del software 
-
-siguen siendo una preocupación tanto para el área de TI como para
-el negocio.
+Sobre este contexto empresarial es donde es en donde se ha detectado
+un conjunto de problemas que se basan en que la realidad del negocio
+sigue cambiando. Afectando incluso los procesos bien definidos que
+se encuentran en la capa media, así pues aun teniendo una herramienta
+como SOA, que nos ayuda en la integración de servicios y en la fácil
+adaptación de nuevos procesos, estos procesos siguen creciendo y aumentando
+en su complejidad. Por lo que se puede inferir que los atributos de
+calidad del software como mantenibilidad, complejidad,desempeño entre
+otros. Siguen siendo una preocupación tanto para el área de TI como
+para el negocio.
 
 Con base en esta realidad, se desarrolla esta propuesta de tesis,
 en la que se describen los problemas más comunes a los que se enfrenta
@@ -183,11 +136,11 @@ se presentarán herramientas que apoyarán la solución de éstos problemas.
 
 \section{Problema a resolver / Oportunidad de Mejora}
 
-\emph{Contexto: Análisis de procesos de negocio orientados a la web,
-en situaciones de alta complejidad, con requerimientos funcionales
-cambiantes, en un entorno de arquitecturas orientadas a servicio.}
+\textbf{\emph{Contexto: Análisis de procesos de negocio orientados
+a la web, en situaciones de alta complejidad, con requerimientos funcionales
+cambiantes, en un entorno de arquitecturas orientadas a servicio.}}
 
-La oportunidad de mejora se centra en lo que hemos llamado \textquotedblleft{}complejidad
+La oportunidad de mejora se centra en lo que hemos llamado ``complejidad
 de procesos de negocio web\textquotedblright{} a pesar de que esta
 se produce en el proceso de desarrollo, no está exenta a los problemas
 de un software tradicional, por ejemplo: inyección de defectos, excepciones
@@ -197,7 +150,7 @@ negativas tanto para el proceso de desarrollo como para el impacto
 en el negocio.
 
 Tomemos como ejemplo el caso de estudio que propone la suite de Oracle
-SOA Suite, de nombre Fusion Order Demo{[}2{]} que simula el comportamiento
+SOA Suite, de nombre <<Fusion Order Demo>>. Que simula el comportamiento
 de una empresa internacional de retail como Fallabela o París, conocidas
 en el contexto chileno.
 
@@ -210,7 +163,7 @@ de transporte físico.
 Para lograr este objetivo, el proceso de negocio tiene que interactuar
 con múltiples actores dentro de una cadena y sistema de valor, además
 de ejecutar ciertas instrucciones de negocio para producir el resultado
-esperado. 
+esperado.
 
 Suponiendo que la solicitud del cliente -programar el proceso de orden
 de compra- fue entregada en una reunión inicial junto con un diagrama
@@ -233,11 +186,11 @@ publicaciones como\cite{Cardoso2008,Cardoso2006,Budnik2011} entre
 las cuales, las que mas resaltan son las de complejidad de flujo (CFC)
 que mide como afectan los controles de flujo tales como estructuras
 de bifurcación o iteración y las métricas de actividad que es similar
-a la métrica de lineas de código. 
+a la métrica de lineas de código.
 
 En este contexto, la propuesta de alcance se construye desde la labor
 heurística del arquitecto líder, que puede prometer cualidades del
-software que no lo comprometan. 
+software que no lo comprometan.
 
 Por ejemplo: Un grado de mantenibilidad del 80\% y una complejidad
 MEDIA de la lógica del proceso. Medidas que para la promesa de la
@@ -279,7 +232,7 @@ al proyecto, implicando gastos y tiempo extra, Lubke and Singer\cite{DanielLubke
 comparten el problema y proponen un mecanismo para verificar la cobertura
 de pruebas realizadas a los procesos BPEL.
 
-Otra de las problemáticas comunes que se deben enfrentar es el \textquotedblleft{}cambio\textquotedblright{}
+Otra de las problemáticas comunes que se deben enfrentar es el ``cambio\textquotedblright{}
 constante al interior negocio, los estudios indican que al 38\% de
 las soluciones con procesos de negocio se les aplicará un proceso
 de rediseño en toda la organización\cite{Cardoso2008}, por lo que
@@ -313,29 +266,29 @@ de procesos la cual debe preocuparse por gobernar una arquitectura
 muy compleja organizacionalmente, la figura.\ref{fig:Preocupaciones-del-Gobierno}
 muestra el contexto básico de lo que debe preocupar a la disciplina
 de gobierno de servicios, quien es en esencia la responsable de la
-toma de decisiones asociadas principalmente a las siguientes preguntas:
+toma de decisiones asociadas principalmente a las siguientes preguntas: 
 \begin{enumerate}
 \item ¿Quién toma las decisiones y ejecuta los procesos? \\
-Para responder a esta pregunta es necesario tener un control sobre
+ Para responder a esta pregunta es necesario tener un control sobre
 quién debe hacer y qué actividades, así como quien puede ejecutar
 los procesos de negocio, por lo que es indispensable comprender las
 relaciones que tienen los distintos integrantes del proceso con los
-artefactos que intervienen en el.
+artefactos que intervienen en el. 
 \item ¿Que políticas se deben aplicar en los procesos? \\
-Cada proceso tiene asociado cualidades de servicio como seguridad
+ Cada proceso tiene asociado cualidades de servicio como seguridad
 o metas de negocio que son designadas durante el diseño del proceso
 y deben cumplirse para que la organización pueda cumplir con sus objetivos.
 Preocuparse por determinar porque un proceso puede o no cumplir con
 dichas cualidades es complejo al tener un aumento significativo en
-la cantidad de reglas y sus relaciones.
+la cantidad de reglas y sus relaciones. 
 \item ¿Como todo este ambiente es orquestado y controlado por los procesos?
 \\
-La última pregunta representa en sí misma la labor del diseño de procesos
-de negocio, al tener que preocuparse tanto por el diseño como de los
-problemas descritos en esta propuesta. El cómo es la pregunta que
-conlleva más esfuerzo por parte de los ingenieros y que tiene el mayor
-porcentaje de errores al ser en esencia una implementación de un desarrollo
-de software.
+ La última pregunta representa en sí misma la labor del diseño de
+procesos de negocio, al tener que preocuparse tanto por el diseño
+como de los problemas descritos en esta propuesta. El cómo es la pregunta
+que conlleva más esfuerzo por parte de los ingenieros y que tiene
+el mayor porcentaje de errores al ser en esencia una implementación
+de un desarrollo de software. 
 \end{enumerate}
 \begin{figure}
 \caption{ \label{fig:Preocupaciones-del-Gobierno}Preocupaciones del Gobierno
@@ -352,7 +305,7 @@ SOA\cite{Weir2013}}
 En este contexto, el gobierno de procesos es importante para destacar
 que se están abordando todos los problemas anteriormente mencionados
 en distintos centros de investigación, los cuales están produciendo
-herramientas metodológicas para abordar correctamente los procesos. 
+herramientas metodológicas para abordar correctamente los procesos.
 
 A pesar de lo positivo, la inversión que es necesaria para que estas
 preocupaciones sean mitigadas es muy alta, presentándose como otra
@@ -381,7 +334,7 @@ adoptada en el proceso de desarrollo de procesos BPEL}}
 Se ha demostrado en otros contextos del desarrollo de software que
 contar con herramientas que permitan visualizar diferentes perspectivas
 de arquitectura es una excelente manera de integrar la valoración
-del producto al ciclo de vida del desarrollo, caso de ejemplo es\url{www.moosetechnology.com}.
+del producto al ciclo de vida del desarrollo, caso de ejemplo es www.moosetechnology.com.
 Herramienta que tiene como propósito incrementar las opciones y la
 productividad de las valoraciones de software utilizando múltiples
 herramientas que permiten analizar las diferentes perspectivas de
@@ -438,7 +391,7 @@ SOA pueda ser implementada con menos costos operativos, lo cual a
 generado que esta tecnología pueda ser usada en la mediana industria
 porque lo que en términos de importancia para la comunidad, el desarrollo
 de esta tesis es un aporte muy valorado para facilitar la implantación
-y manutención de los procesos. 
+y manutención de los procesos.
 
 Ahora es normal ver como empresas pueden usar infraestructuras en
 la nube para usar esta tecnología con costos muy competitivos y de
@@ -477,29 +430,24 @@ fase de concepción en donde se ha realizado una evaluación de la suite
 de trabajo moosetechnology como herramienta principal de co-creación
 de la herramienta. Observando que existen numerosas ventajas, para
 el análisis y principalmente para la producción de herramientas de
-vizualización y navegabilidad de artefactos.
+visualización y navegabilidad de artefactos.
 
 Con base en el éxito de esta primera fase en la que principalmente
-se realizaron tareas utilizando una estrategia de metodología ágil
-guiada por paquetes de trabajo cortos y validación, con la que efectivamente
-se verifico la viabilidad de la propuesta de tesis, ademas de que
-siendo este proyecto es una propuesta netamente de innovación. Se
-concluye que optar por una estrategía iterativa e incremental guiada
-por una herramienta de gestión tipo scrum es la que mas se ajusta
-a este modelo.\newpage{}
-
-\begin{landscape}\par 
+se realizaron tareas de verificación tecnológica, utilizando estrategia
+bajo el modelo de metodología ágil, con la que efectivamente se verifico
+la viabilidad de la propuesta de tesis, además de que siendo este
+proyecto es una propuesta netamente de innovación. Se concluye que
+optar por una estrategia iterativa e incremental guiada por una herramienta
+de gestión tipo scrum, es la que mas se ajusta a este modelo.\newpage{}\begin{landscape}\par 
 \begin{figure}
 \caption{\textbf{Plan de trabajo General - Macroactividades:}}
 
 
 \centering{}\includegraphics{img/Cronograma} 
 \end{figure}
-
-
 \par \end{landscape}
 
-\newpage{} \bibliographystyle{plain}
+\newpage{}  \bibliographystyle{plain}
 \bibliography{MGTI}
 
 \end{document}
